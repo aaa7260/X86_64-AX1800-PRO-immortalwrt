@@ -67,3 +67,22 @@ if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]]; then
 		echo "qualcommax set up nowifi successfully!"
 	fi
 fi
+# 打印最终config文件详细信息用于调试
+echo "=== 最终.config文件详细信息 ==="
+echo "配置文件: $(pwd)/.config"
+echo "文件大小: $(wc -l < .config) 行, $(wc -c < .config) 字节"
+echo "最后修改: $(date -r .config)"
+
+echo "=== 关键配置统计 ==="
+echo "启用的包: $(grep -c "=y" .config) 个"
+echo "禁用的包: $(grep -c "=n" .config) 个"
+echo "内核模块: $(grep -c "CONFIG_PACKAGE_kmod" .config) 个"
+echo "LUCI应用: $(grep -c "CONFIG_PACKAGE_luci-app" .config) 个"
+
+echo "=== 前30行内容 ==="
+head -30 .config
+
+echo "=== 问题区域检查 (260-290行) ==="
+sed -n '260,290p' .config
+
+echo "=== 配置完成 ==="
