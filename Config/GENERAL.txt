@@ -106,7 +106,7 @@ CONFIG_PACKAGE_libfuse1=y
 CONFIG_PACKAGE_libfuse3-3=y
 # 动态域名解析
 CONFIG_PACKAGE_luci-app-ddns=y
-CONFIG_PACKAGE_luci-app-ddns-go=y
+CONFIG_PACKAGE_luci-app-ddns-go=n
 # 微力同步
 CONFIG_PACKAGE_luci-app-verysync=y
 # 补全linux系统管理指令
