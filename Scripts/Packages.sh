@@ -14,6 +14,7 @@
 ##echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> ../feeds.conf.default
 ##echo >> ../feeds.conf.default
 ##echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> ../feeds.conf.default
+echo 'src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main' >> ../feeds.conf.default
 
 # 更新并安装所有添加的软件源
 ##echo "Updating and installing feeds"
