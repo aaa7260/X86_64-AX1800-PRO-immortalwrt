@@ -41,9 +41,9 @@ on:
         required: false
         type: string
       WRT_USE_IPK:
-      required: false
-      type: string
-      default: "false"
+        required: false
+        type: string
+        default: "false"
 
 
 env:
