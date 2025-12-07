@@ -40,6 +40,11 @@ on:
       WRT_TEST:
         required: false
         type: string
+      WRT_USE_IPK:
+      required: false
+      type: string
+      default: "false"
+
 
 env:
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -100,7 +105,14 @@ jobs:
 
           # ---------修改软件源为IPK（新增部分）-------#
           #sed -i 's/.apk/.ipk/g' feeds.conf.default
+          if [ "${WRT_USE_IPK}" = "true" ]; then
+            echo "🔧 使用 IPK 源，正在替换 feeds.conf.default 中的 .apk → .ipk"
+            sed -i 's/\.apk/\.ipk/g' feeds.conf.default
+          else
+            echo "🔧 使用默认 APK 源，保持不变"
+          fi
 
+          
           # GitHub Action 移除国内下载源
           PROJECT_MIRRORS_FILE="./scripts/projectsmirrors.json"
           if [ -f "$PROJECT_MIRRORS_FILE" ]; then
