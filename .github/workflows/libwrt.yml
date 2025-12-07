@@ -20,6 +20,11 @@ on:
         default: 'false'
         required: false
         type: boolean
+      USE_IPK:
+      description: '是否将 APK 源修改为 IPK 源'
+      default: 'false'
+      required: false
+      type: boolean
 
 #CI权限
 permissions: write-all
@@ -60,6 +65,9 @@ jobs:
       WRT_BRANCH: ${{matrix.BRANCH}}
       #源码名称
       WRT_SOURCE: ${{matrix.SOURCE}}
+      #是否IPK
+      WRT_USE_IPK: ${{inputs.USE_IPK}}
+
       #插件调整
       WRT_PACKAGE: ${{inputs.PACKAGE}}
       #仅输出配置文件
