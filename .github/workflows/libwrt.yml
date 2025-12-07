@@ -21,10 +21,10 @@ on:
         required: false
         type: boolean
       USE_IPK:
-      description: '是否将 APK 源修改为 IPK 源'
-      default: 'false'
-      required: false
-      type: boolean
+        description: '是否将 APK 源修改为 IPK 源'
+        default: 'false'
+        required: false
+        type: boolean
 
 #CI权限
 permissions: write-all
