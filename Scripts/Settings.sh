@@ -93,4 +93,3 @@ echo "=== 问题区域检查 (260-290行) ==="
 sed -n '260,290p' .config
 
 echo "=== 配置完成 ==="
-make clean
