@@ -259,3 +259,4 @@ if [ -d "luci-app-athena-led" ]; then
     echo "Added execute permissions for athena_led files."
 fi
 #-------------------2025.05.31-测试-----------------#
+mkdir -p dl && cp -f $GITHUB_WORKSPACE/cups-2.3.3-source.tar.gz dl/cups-2.3.3-source.tar.gz
