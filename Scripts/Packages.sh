@@ -15,6 +15,8 @@
 ##echo >> ../feeds.conf.default
 ##echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> ../feeds.conf.default
 echo 'src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main' >> ../feeds.conf.default
+echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
+echo 'src-git small https://github.com/kenzok8/small-package' >>feeds.conf.default
 
 # 更新并安装所有添加的软件源
 ##echo "Updating and installing feeds"
