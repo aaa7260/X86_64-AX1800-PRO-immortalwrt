@@ -1,7 +1,9 @@
 #!/bin/bash
 
 
-#sed -i "s/IMAGE\/factory\.bin \:\= append-kernel \| pad-to 12288k \| append-rootfs \| append-metadata/IMAGE\/factory\.bin \:\= append-kernel \| pad-to 6144k \| append-rootfs \| append-metadata/g" target/linux/qualcommax/image/ipq60xx.mk
+sed -i "s/IMAGE\/factory\.bin \:\= append-kernel \| pad-to 12288k \| append-rootfs \| append-metadata/IMAGE\/factory\.bin \:\= append-kernel \| pad-to 6144k \| append-rootfs \| append-metadata/g" target/linux/qualcommax/image/ipq60xx.mk
+
+sed -i "s/DEVICE_DTS_CONFIG \:= config@cp03-c3/DEVICE_DTS_CONFIG \:= ipq6010-re-cs-02/" target/linux/qualcommax/image/ipq60xx.mk
 #修改默认主题
 sed -i "s/luci-theme-bootstrap/luci-theme-$WRT_THEME/g" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 #修改immortalwrt.lan关联IP
@@ -91,3 +93,4 @@ echo "=== 问题区域检查 (260-290行) ==="
 sed -n '260,290p' .config
 
 echo "=== 配置完成 ==="
+make clean
