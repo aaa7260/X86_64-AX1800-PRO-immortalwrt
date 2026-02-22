@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+sed -i "s/IMAGE\/factory\.bin \:\= append-kernel \| pad-to 12288k \| append-rootfs \| append-metadata/IMAGE\/factory\.bin \:\= append-kernel \| pad-to 6144k \| append-rootfs \| append-metadata/g" target/linux/qualcommax/image/ipq60xx.mk
 #修改默认主题
 sed -i "s/luci-theme-bootstrap/luci-theme-$WRT_THEME/g" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 #修改immortalwrt.lan关联IP
