@@ -285,7 +285,8 @@ jobs:
         run: |
           cd ./wrt/
 
-          make -j$(nproc) || make -j$(nproc) V=s
+          #make -j$(nproc) || make -j$(nproc) V=s
+          make -j1 V=s
 
 # ========== 以下新增文件整理步骤 (启用取消2个“##”)========== #
       ##- name: Organize Files
