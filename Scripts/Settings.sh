@@ -96,7 +96,7 @@ echo "=== 问题区域检查 (260-290行) ==="
 #sed -n '260,290p' .config
 
 echo "=== 配置完成 ==="
-#rm -rf feeds/packages/net/samba4
+rm -rf feeds/packages/net/samba4
 # 修正 python 相关依赖缺失警告
-#./scripts/feeds update packages
-#./scripts/feeds install python3-pysocks python3-unidecode
+./scripts/feeds update packages
+./scripts/feeds install python3-pysocks python3-unidecode
