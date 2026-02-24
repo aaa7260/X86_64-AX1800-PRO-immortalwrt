@@ -99,8 +99,8 @@ jobs:
           sudo apt-get autoremove --purge -y
           sudo apt-get clean
           # 挂载编译专用目录（你原有代码已包含，此处确保逻辑连贯）
-          #sudo mkdir -p /mnt/build_wrt
-          #sudo chown $USER:$USER /mnt/build_wrt
+          # sudo mkdir -p /mnt/build_wrt
+          # sudo chown $USER:$USER /mnt/build_wrt
           df -h # 输出当前空间情况，方便你在日志里检查
           # --------------------------------------------------
           
