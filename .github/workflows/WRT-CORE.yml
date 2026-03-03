@@ -60,6 +60,7 @@ env:
   WRT_SOURCE: ${{inputs.WRT_SOURCE}}
   WRT_PACKAGE: ${{inputs.WRT_PACKAGE}}
   WRT_TEST: ${{inputs.WRT_TEST}}
+  WRT_USE_IPK: ${{inputs.WRT_USE_IPK}}
 
 jobs:
   core:
