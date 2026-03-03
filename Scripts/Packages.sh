@@ -78,6 +78,7 @@ UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh --no-sfe
 echo "src-git cups https://github.com/SoPudge/lede-cups.git" >> feeds.conf.default
 mkdir -p dl && cp -f $GITHUB_WORKSPACE/cups-2.3.3-source.tar.gz dl/cups-2.3.3-source.tar.gz
+echo "src-git openclaw https://github.com/10000ge10000/luci-app-openclaw.git" >> feeds.conf.default
 #更新软件包版本
 UPDATE_VERSION() {
 	local PKG_NAME=$1
