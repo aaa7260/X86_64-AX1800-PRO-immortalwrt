@@ -132,6 +132,7 @@ jobs:
           if [ "${WRT_USE_IPK}" = "true" ]; then
             echo "🔧 使用 IPK 源，正在替换 feeds.conf.default 中的 .apk → .ipk"
             sed -i 's/\.apk/\.ipk/g' feeds.conf.default
+            echo "CONFIG_USE_APK=n" >> ./.config
           else
             echo "🔧 使用默认 APK 源，保持不变"
           fi
