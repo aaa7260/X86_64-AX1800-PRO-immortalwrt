@@ -80,7 +80,7 @@ curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turbo
 UPDATE_PACKAGE "cups" "SoPudge/lede-cups" "master"
 mkdir -p dl && cp -f $GITHUB_WORKSPACE/cups-2.3.3-source.tar.gz dl/cups-2.3.3-source.tar.gz
 #echo "src-git openclaw https://github.com/10000ge10000/luci-app-openclaw.git" >> feeds.conf.default
-UPDATE_PACKAGE "luci-app-openclaw" "10000ge10000/luci-app-openclaw" "main"
+#UPDATE_PACKAGE "luci-app-openclaw" "10000ge10000/luci-app-openclaw" "main"
 #更新软件包版本
 UPDATE_VERSION() {
 	local PKG_NAME=$1
