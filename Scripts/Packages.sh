@@ -76,9 +76,11 @@ UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-timewol luci-ap
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 #UPDATE_PACKAGE "luci-app-turboacc" "chenmozhijia/luci-app-turboacc" "luci"
 curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh --no-sfe
-echo "src-git cups https://github.com/SoPudge/lede-cups.git" >> feeds.conf.default
+#echo "src-git cups https://github.com/SoPudge/lede-cups.git" >> feeds.conf.default
+UPDATE_PACKAGE "cups" "SoPudge/lede-cups" "master"
 mkdir -p dl && cp -f $GITHUB_WORKSPACE/cups-2.3.3-source.tar.gz dl/cups-2.3.3-source.tar.gz
-echo "src-git openclaw https://github.com/10000ge10000/luci-app-openclaw.git" >> feeds.conf.default
+#echo "src-git openclaw https://github.com/10000ge10000/luci-app-openclaw.git" >> feeds.conf.default
+UPDATE_PACKAGE "openclaw" "10000ge10000/luci-app-openclaw" "main"
 #更新软件包版本
 UPDATE_VERSION() {
 	local PKG_NAME=$1
