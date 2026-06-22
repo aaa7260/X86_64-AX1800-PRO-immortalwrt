@@ -272,9 +272,9 @@ CONFIG_PACKAGE_luci-app-attendedsysupgrade=n
 #CONFIG_PACKAGE_oaf=y
 #CONFIG_PACKAGE_open-app-filter=n
 #CONFIG_PACKAGE_luci-app-oaf=y
-CONFIG_PACKAGE_luci-app-appfilter=n
-CONFIG_PACKAGE_appfilter=n
-CONFIG_PACKAGE_kmod-appfilter=n
+CONFIG_PACKAGE_luci-app-appfilter=y
+CONFIG_PACKAGE_appfilter=y
+CONFIG_PACKAGE_kmod-appfilter=y
 
 # ---------------以下2025.11.23--增加--------------- #
 # 事件循环处理
@@ -328,5 +328,5 @@ CONFIG_PACKAGE_git=y
 CONFIG_PACKAGE_ca-bundle=y
 CONFIG_PACKAGE_ca-certificates=y
 
-CONFIG_PACKAGE_kmod-nf-ipt=n
+
 CONFIG_PACKAGE_kmod-iptables=y
